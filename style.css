@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+
+body {
+  font-family: 'Itim', cursive;
+  background-color: #dfe6e9;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  user-select: none;
+}
+
+section {
+  text-align: center;
+}
+
+.game--title {
+  margin-top: 40px;
+  font-size: 40px;
+  color: #2d3436;
+}
+
+.game--container {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  width: 306px;
+  margin: 40px auto;
+}
+
+.cell {
+  width: 100px;
+  height: 100px;
+  box-shadow: 0 0 0 1px #2d3436;
+  border: 1px solid #2d3436;
+  cursor: pointer;
+  line-height: 100px;
+  font-size: 60px;
+}
+
+.game--status {
+  color: #636e72;
+  margin-bottom: 35px;
+}
+
+.game--restart {
+  position: relative;
+  background-color: #fdcb6e;
+  border: none;
+  border-radius: 25px;
+  font-size: 17px;
+  color: #2d3436;
+  padding: 15px;
+  width: 150px;
+  text-align: center;
+  -webkit-transition-duration: 0.5s; /* Safari */
+  transition-duration: 0.5s;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.game--restart:after {
+  content: "";
+  background: #ffeaa7;
+  display: block;
+  position: absolute;
+  border-radius: 25px;
+  padding-top: 300%;
+  padding-left: 350%;
+  margin-left: -20px !important;
+  margin-top: -120%;
+  opacity: 0;
+  transition: all 1.5s;
+}
+
+.game--restart:active:after {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s;
+}
